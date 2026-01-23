@@ -4,39 +4,29 @@ function App() {
 
   return (
     <>
-      <div id="container" class="mx-auto my-[30px] max-w-[400px] p-5">
-        <div class="form-wrap bg-white px-[25px] py-[15px] text-[#333] shadow-lg rounded-sm">
-          <h1 class="text-center text-2xl font-semibold">Sign In</h1>
-          <form>
-            <div class="form-group mt-[15px]">
-              <label for="email" class="block text-left text-[#666]">Email</label>
-              <input 
-                type="email" 
-                name="email" 
-                id="email" 
-                class="w-full p-2.5 border border-[#ddd] rounded-[5px] focus:outline-none focus:ring-2 focus:ring-[#49c1a2] focus:border-transparent transition-all"
-              />
+    <div id="container" className=''>
+      <div id="log-in-form" className='flex justify-center mt-36'>
+        <div className='w-1/5 border border-slate-300 pt-12 pb-9 px-8 rounded'>
+          <h1 className='block text-3xl font-bold text-center'>Sign In</h1>
+          <p className='text-center text-slate-500 mt-5 mb-9'>Enter your credencials to continue</p>
+          <form action="">
+            <input type="email" className='block w-full mb-10 border-slate-300 rounded' placeholder='Email' />
+            <input type="password" className='block w-full border-slate-300 rounded' placeholder='Password' />
+            <div id="remember-password" className='flex justify-between mt-8 mb-7'>
+              <div id="remember-checkbox">
+                <input type="checkbox" className='relative bottom-0.5 mr-2 border-slate-300 rounded' />
+                <label htmlFor="" className='text-slate-600 font-medium'>Remember me</label>
+              </div>
+              <a href="" className='text-blue-500 font-medium'>Forgot password?</a>
             </div>
-
-            <div class="form-group mt-[15px]">
-              <label for="password" class="block text-left text-[#666]">Password</label>
-              <input 
-                type="password" 
-                name="password" 
-                id="password" 
-                class="w-full p-2.5 border border-[#ddd] rounded-[5px] focus:outline-none focus:ring-2 focus:ring-[#49c1a2] focus:border-transparent transition-all"
-              />
-            </div>
-
-            <button 
-              type="submit" 
-              class="block w-full mt-5 p-2.5 bg-[#49c1a2] text-white border-none cursor-pointer rounded-[5px] transition-colors duration-300 hover:bg-[#37a08e]"
-            >
-              Sign In
+            <button className='w-full h-10 mb-7 text-white bg-blue-500 rounded'>
+              Sign in
             </button>
           </form>
+          <p className='text-center text-slate-500'>Don't have an account? <span className='text-blue-500 font-medium'>Create one</span></p>
         </div>
       </div>
+    </div>
     </>
   )
 }
